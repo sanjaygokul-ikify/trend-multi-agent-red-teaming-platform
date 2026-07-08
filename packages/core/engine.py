@@ -22,17 +22,23 @@ class ThreatGroupCoordinator:
 
     def coordinate_attack(self):
         for attack_vector in self.attack_vectors:
-            logger.info(f'Invoking attack vector: {attack_vector.name}')
-            # Invoke exploitation module and defense bypass module
-            # ... (implementation omitted for brevity)
-            logger.info(f'Attack vector {attack_vector.name} completed')
+            try:
+                logger.info(f'Invoking attack vector: {attack_vector.name}')
+                # Invoke exploitation module and defense bypass module
+                # ... (implementation omitted for brevity)
+                logger.info(f'Attack vector {attack_vector.name} completed')
+            except Exception as e:
+                logger.error(f'Error coordinating attack: {str(e)}')
 
     def track_target_state(self):
         for target_state in self.target_states:
-            logger.info(f'Tracking target state: {target_state.name}')
-            # Update target state based on attack vector results
-            # ... (implementation omitted for brevity)
-            logger.info(f'Target state {target_state.name} updated')
+            try:
+                logger.info(f'Tracking target state: {target_state.name}')
+                # Update target state based on attack vector results
+                # ... (implementation omitted for brevity)
+                logger.info(f'Target state {target_state.name} updated')
+            except Exception as e:
+                logger.error(f'Error tracking target state: {str(e)}')
 
 class ExploitationModule:
     def __init__(self, attack_vector: AttackVector):
