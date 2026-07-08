@@ -1,0 +1,10 @@
+platform:
+  mode: red-team-simulator
+  agents:
+    max_concurrent: 16
+    communication:
+      protocol: gossip-secure
+      heartbeat_interval: 30}
+  telemetry:
+    aggregation_threshold: 4
+    analysis_window: 5m
