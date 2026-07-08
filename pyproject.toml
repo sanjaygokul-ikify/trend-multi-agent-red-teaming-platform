@@ -1,0 +1,13 @@
+[build-system]
+requires = [
+  "poetry-core>=1.0.0",
+  "mypy>=1.0.0",
+  "bandit>=1.7.4"
+]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "multi-agent-red-teaming-platform"
+version = "0.1.0"
+description = "Distributed red teaming framework"
+authors = ["Principal Software Engineer <email>"]
